@@ -10,7 +10,7 @@ License: MIT LICENSE
 class Queue(list):
     """
     Queue class is implemented with this class.
-    Founded on list class
+    Based on list built-in class
     """
 
     def __init__(self,listEl = None, maxLen = -1) -> bool:
@@ -21,7 +21,8 @@ class Queue(list):
             maxLen (integer, optional): Maximum length of Queue. If -1, unlimited. Defaults to -1.
         """
         self.maxLength = maxLen
-        if type(self.maxLen) == int:
+
+        if type(self.maxLength) != int:
             raise TypeError('Maximum length specified must be an integer')
         if self.maxLen() == 0 or (self.maxLen() < 0 and self.maxLen() != -1):
             raise ValueError('Queue can not be have 0 max length')
@@ -31,10 +32,9 @@ class Queue(list):
             try:
                 for el in listEl:
                     self.append(el)
-                    return True
                     
             except TypeError:
-                return False
+                raise TypeError('listEl must be an iterable')
 
     def len(self) -> int:
         """
@@ -117,6 +117,6 @@ class QueueIsEmpty(Exception):
     Exception raised if queue is empty and when it's impossible to remove an element
     """
     def __init__(self) -> None:
-        super().__init__('Queue is empty, it\'s impossible to remove an element')
+        super().__init__('Queue is empty, it is impossible to remove an element')
 
 pass
