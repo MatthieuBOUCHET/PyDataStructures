@@ -1,2 +1,2 @@
-# PyQueue
-Basic library to implement queue in Python
+# PyDataStructures
+Basic library to implement data structures in Python
