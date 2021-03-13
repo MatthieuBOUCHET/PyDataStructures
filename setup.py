@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="pydatastructures", # Replace with your own username
+    name="pydatastructures",
     version="0.0.1",
     author="Matthieu BOUCHET",
     author_email="matthieu.bouchet@outlook.com",
