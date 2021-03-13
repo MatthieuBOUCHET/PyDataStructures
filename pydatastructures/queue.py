@@ -101,6 +101,9 @@ class Queue(list):
                 return stringReturn
             
             stringReturn += ' | '
+    
+    def __repr__(self) -> str:
+        return self.__str__()
 
 class QueueOverflow(Exception):
     """
